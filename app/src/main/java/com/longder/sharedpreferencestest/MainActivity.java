@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 * 数据写入
+                 */
                 SharedPreferences.Editor editor = getSharedPreferences("data", Context.MODE_PRIVATE).edit();
                 editor.putInt("age", 18);
                 editor.putString("name", "大表哥");
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         restoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 * 数据读取
+                 */
                 SharedPreferences sp = getSharedPreferences("data", Context.MODE_PRIVATE);
                 String name = sp.getString("name", "");
                 int age = sp.getInt("age", 0);
